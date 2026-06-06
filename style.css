@@ -88,7 +88,7 @@ a {
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
-  border-color: #3d5a80;
+  border-color: var(--brand-color, #3d5a80);
 }
 
 /* --- Icon box --- */
@@ -97,9 +97,9 @@ a {
   height: 48px;
   display: grid;
   place-items: center;
-  background: #e0ebf5;
+  background: var(--brand-bg, #e0ebf5);
   border-radius: 8px;
-  color: #3d5a80;
+  color: var(--brand-color, #3d5a80);
   flex-shrink: 0;
   transition: .3s;
 }
@@ -110,7 +110,7 @@ a {
 }
 
 .card:hover .card-icon {
-  background: #3d5a80;
+  background: var(--brand-color, #3d5a80);
   color: #fff;
 }
 
@@ -139,8 +139,16 @@ a {
 
 .card:hover .card-arrow {
   transform: translateX(4px);
-  color: #3d5a80;
+  color: var(--brand-color, #3d5a80);
 }
+
+/* --- Brand Colors --- */
+.card-linkedin { --brand-color: #0a66c2; --brand-bg: #e6f0f9; }
+.card-github { --brand-color: #24292e; --brand-bg: #f6f8fa; }
+.card-docker { --brand-color: #2496ed; --brand-bg: #e9f4fd; }
+.card-instagram { --brand-color: #e1306c; --brand-bg: #fceaf0; }
+.card-strava { --brand-color: #fc4c02; --brand-bg: #ffede5; }
+.card-soundcloud { --brand-color: #ff5500; --brand-bg: #ffeee5; }
 
 /* --- Build badge --- */
 .build-badge {
