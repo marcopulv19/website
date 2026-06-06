@@ -122,11 +122,11 @@ a {
 .card-name {
   display: block;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .card-handle {
-  font-size: .9rem;
+  font-size: .85rem;
   color: #6b6b6b;
 }
 
