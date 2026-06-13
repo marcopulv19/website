@@ -2,7 +2,7 @@ services:
   portfolio:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     container_name: portfolio-web
     ports:
       - "80:80"
