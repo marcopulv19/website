@@ -1,9 +1,9 @@
 services:
-  portfolio:
+  website:
     build:
       context: .
       dockerfile: dockerfile
-    container_name: portfolio-web
+    container_name: website
     ports:
       - "80:80"
     restart: unless-stopped
