@@ -2,4 +2,6 @@
 .gitignore
 *.md
 docker-compose.yml
+status.sh
 certs/
+site-offline

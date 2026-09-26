@@ -8,10 +8,5 @@ services:
       - "443:443"
     volumes:
       - ./certs:/etc/nginx/certs:ro
+      - ./:/var/www/site:ro
     restart: unless-stopped
-    healthcheck:
-      test: [ "CMD", "wget", "--no-check-certificate", "-qO-", "https://127.0.0.1/" ]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-      start_period: 5s

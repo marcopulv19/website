@@ -1,4 +1,3 @@
-# --- Stage 1: Lightweight Nginx server for static portfolio ---
 FROM nginx:1.27-alpine
 
 # Remove default nginx page
@@ -7,9 +6,11 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy portfolio files
 COPY index.html /usr/share/nginx/html/
-COPY style.css  /usr/share/nginx/html/
+COPY status.html /usr/share/nginx/html/
+COPY 404.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY status.js /usr/share/nginx/html/
 
 # Expose HTTPS only
 EXPOSE 443
