@@ -11,11 +11,11 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/
 COPY style.css  /usr/share/nginx/html/
 
-# Expose HTTP and HTTPS ports
-EXPOSE 80 443
+# Expose HTTPS only
+EXPOSE 443
 
 # Healthcheck
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget -qO- http://localhost/ || exit 1
+  CMD wget --no-check-certificate -qO- https://localhost/ || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]

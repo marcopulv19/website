@@ -5,10 +5,12 @@ services:
       dockerfile: dockerfile
     container_name: website
     ports:
-      - "80:80"
+      - "443:443"
+    volumes:
+      - ./certs:/etc/nginx/certs:ro
     restart: unless-stopped
     healthcheck:
-      test: [ "CMD", "wget", "-qO-", "http://localhost/" ]
+      test: [ "CMD", "wget", "--no-check-certificate", "-qO-", "https://localhost/" ]
       interval: 30s
       timeout: 3s
       retries: 3
