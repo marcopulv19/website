@@ -150,20 +150,13 @@ a {
 .card-strava { --brand-color: #fc4c02; --brand-bg: #ffede5; }
 .card-soundcloud { --brand-color: #ff5500; --brand-bg: #ffeee5; }
 
-/* --- Build badge --- */
-.build-badge {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: .65rem;
-  color: #999;
-  background: rgba(0, 0, 0, .04);
-  border: 1px solid rgba(0, 0, 0, .07);
-  border-radius: 6px;
-  padding: .25rem .5rem;
-  letter-spacing: .03em;
-  pointer-events: none;
-  user-select: none;
+/* --- Footer --- */
+.site-footer {
+  width: min(100% - 3rem, 472px);
+  margin: 0 auto 1.5rem;
+  padding-top: .85rem;
+  border-top: 1px solid #e8e5e1;
+  color: #777;
+  font-size: .75rem;
+  text-align: center;
 }
