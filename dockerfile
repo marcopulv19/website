@@ -11,6 +11,7 @@ COPY status.html /usr/share/nginx/html/
 COPY 404.html /usr/share/nginx/html/
 COPY style.css /usr/share/nginx/html/
 COPY status.js /usr/share/nginx/html/
+COPY resume/ /usr/share/nginx/html/resume/
 
 # Expose HTTPS only
 EXPOSE 443

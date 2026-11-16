@@ -9,6 +9,7 @@ Minimal static profile site: plain HTML, CSS, and JavaScript served by Nginx in 
 - `404.html` — branded not-found page.
 - `style.css` — shared page styling and responsive social grid.
 - `status.js` — updates the live site status.
+- `resume/` — resume page and its assets, available at `/resume`.
 - `status.sh` — sets or checks online/offline state.
 - `nginx.conf`, `dockerfile`, `docker-compose.yml` — HTTPS server and deployment.
 
