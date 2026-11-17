@@ -4,4 +4,4 @@
 docker-compose.yml
 status.sh
 certs/
-site-offline
+site-maintenance

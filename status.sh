@@ -2,12 +2,12 @@
 set -eu
 
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-flag_file="$script_dir/site-offline"
+flag_file="$script_dir/site-maintenance"
 
 case "${1:-}" in
-  offline)
-    printf 'offline\n' > "$flag_file"
-    printf 'Site status set to offline.\n'
+  maintenance)
+    printf 'maintenance\n' > "$flag_file"
+    printf 'Site status set to maintenance.\n'
     ;;
   online)
     rm -f "$flag_file"
@@ -15,13 +15,13 @@ case "${1:-}" in
     ;;
   status)
     if [ -f "$flag_file" ]; then
-      printf 'Site is offline.\n'
+      printf 'Site is under maintenance.\n'
     else
       printf 'Site is online.\n'
     fi
     ;;
   *)
-    printf 'Usage: %s {online|offline|status}\n' "$0" >&2
+    printf 'Usage: %s {online|maintenance|status}\n' "$0" >&2
     exit 2
     ;;
 esac

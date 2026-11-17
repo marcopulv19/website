@@ -6,11 +6,7 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY index.html /usr/share/nginx/html/
-COPY status.html /usr/share/nginx/html/
-COPY 404.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
-COPY status.js /usr/share/nginx/html/
+COPY index.html status.html 404.html style.css status.js /usr/share/nginx/html/
 COPY resume/ /usr/share/nginx/html/resume/
 
 # Expose HTTPS only

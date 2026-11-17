@@ -11,10 +11,10 @@ fetch('/status-state', { cache: 'no-store' })
   })
   .then(value => {
     const online = value.trim() === 'online';
-    title.textContent = online ? 'Website is online' : 'Website is offline';
+    title.textContent = online ? 'Website is online' : 'Website is under maintenance';
     message.textContent = online
       ? 'All systems are operational.'
-      : 'The site is temporarily unavailable. Please check back soon.';
+      : "We're performing maintenance. Please check back soon.";
     homeLink.hidden = !online;
     icon.style.setProperty('--brand-color', online ? '#16803c' : '#b42318');
     icon.style.setProperty('--brand-bg', online ? '#e8f5ec' : '#fef3f2');
