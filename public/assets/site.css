@@ -97,7 +97,7 @@ a {
   min-width: 0;
   min-height: 88px;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   gap: .75rem;
   padding: .75rem;
   text-align: left;
