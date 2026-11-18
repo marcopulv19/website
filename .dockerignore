@@ -2,6 +2,6 @@
 .gitignore
 *.md
 docker-compose.yml
-scripts/status.sh
-certs/
+status.sh
+deploy/certs/
 site-maintenance

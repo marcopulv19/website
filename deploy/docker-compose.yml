@@ -1,12 +1,12 @@
 services:
   website:
     build:
-      context: .
-      dockerfile: dockerfile
+      context: ..
+      dockerfile: deploy/dockerfile
     container_name: website
     ports:
       - "443:443"
     volumes:
       - ./certs:/etc/nginx/certs:ro
-      - ./:/var/www/site:ro
+      - ../:/var/www/site:ro
     restart: unless-stopped
