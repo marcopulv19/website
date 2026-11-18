@@ -52,7 +52,7 @@ p {
   max-width: 1170px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 25% 75%;
   border: 1px solid rgba(65, 68, 58, 0.12);
   background: var(--panel-cream);
   box-shadow: 0 12px 24px var(--shadow);
