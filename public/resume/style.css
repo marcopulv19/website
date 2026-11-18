@@ -141,6 +141,20 @@ blockquote {
   padding: 0.35rem 0.65rem;
 }
 
+.info-card > .section-heading {
+  margin: -0.8rem -0.7rem 0.5rem;
+  border: 0;
+  border-bottom: 1px solid rgba(65, 68, 58, 0.08);
+  border-radius: 0;
+}
+
+.panel > .section-heading {
+  margin: -0.8rem -0.9rem 0.5rem;
+  border: 0;
+  border-bottom: 1px solid rgba(65, 68, 58, 0.08);
+  border-radius: 11px 11px 0 0;
+}
+
 summary.section-heading {
   cursor: pointer;
   list-style: none;
@@ -365,70 +379,6 @@ details:not([open]) > summary.section-heading::after {
 }
 
 .secondary-panel .year {
-  font-size: 1.15rem;
-}
-
-.subsection-panel {
-  border: 1px solid rgba(65, 68, 58, 0.08);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.18);
-  padding: 0.45rem 0.55rem;
-  margin-top: 0.5rem;
-}
-
-.subsection-heading {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  color: var(--muted);
-}
-
-.subsection-heading::-webkit-details-marker {
-  display: none;
-}
-
-.subsection-heading::after {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-left: auto;
-  border-right: 1px solid var(--muted);
-  border-bottom: 1px solid var(--muted);
-  transform: rotate(45deg);
-  transition: transform 160ms ease;
-}
-
-.subsection-panel:not([open]) > .subsection-heading::after {
-  transform: rotate(-45deg);
-}
-
-.subsection-icon {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  opacity: 0.75;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
-}
-
-.subsection-heading h4 {
-  margin: 0;
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.subsection-panel .entry-header h4 {
-  font-size: 1.5rem;
-}
-
-.subsection-panel .year {
   font-size: 1.15rem;
 }
 
