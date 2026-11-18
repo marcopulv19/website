@@ -4,14 +4,10 @@ Minimal static profile site: plain HTML, CSS, and JavaScript served by Nginx in 
 
 ## Files
 
-- `index.html` — homepage and social cards.
-- `status.html` — live online/maintenance status page.
-- `404.html` — branded not-found page.
-- `style.css` — shared page styling and responsive social grid.
-- `status.js` — updates the live site status.
-- `resume/` — resume page and its assets, available at `/resume`.
-- `status.sh` — sets or checks online/maintenance state.
-- `nginx.conf`, `dockerfile`, `docker-compose.yml` — HTTPS server and deployment.
+- `public/` — website pages and assets served by Nginx.
+- `public/resume/` — resume page, stylesheet, and supporting documents, available at `/resume`.
+- `scripts/status.sh` — sets or checks online/maintenance state.
+- `deploy/nginx.conf`, `Dockerfile`, `docker-compose.yml` — HTTPS server and deployment.
 
 ## Run
 
@@ -19,7 +15,7 @@ Provide a domain-matching TLS certificate and private key as
 `certs/fullchain.pem` and `certs/privkey.pem`, then start the site:
 
 ```sh
-./status.sh online
+./scripts/status.sh online
 docker compose up -d --build
 ```
 
@@ -30,9 +26,9 @@ outside the container.
 ## Site status
 
 ```sh
-./status.sh maintenance
-./status.sh status
-./status.sh online
+./scripts/status.sh maintenance
+./scripts/status.sh status
+./scripts/status.sh online
 ```
 
 Maintenance mode redirects site requests to `status.html` without stopping Nginx.

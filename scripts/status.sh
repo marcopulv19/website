@@ -2,7 +2,7 @@
 set -eu
 
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-flag_file="$script_dir/site-maintenance"
+flag_file="$script_dir/../site-maintenance"
 
 case "${1:-}" in
   maintenance)

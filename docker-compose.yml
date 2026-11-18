@@ -2,7 +2,7 @@ services:
   website:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: website
     ports:
       - "443:443"
