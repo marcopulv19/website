@@ -4,8 +4,10 @@ Minimal static profile site: plain HTML, CSS, and JavaScript served by Nginx in 
 
 ## Files
 
-- `public/` — website pages and assets served by Nginx.
-- `public/resume.html` — resume page, with supporting documents in `public/assets/`, available at `/resume.html`.
+- `public/pages/` — the home, resume, status, and 404 HTML pages.
+- `public/embeds/` — the shared stylesheet, site icon, and portrait.
+- `public/assets/` — supporting documents linked from the resume.
+- `public/pages/resume.html` — resume page, available at `/resume.html`.
 - `status.sh` — sets or checks online/maintenance state.
 - `deploy/nginx.conf`, `deploy/dockerfile`, `deploy/docker-compose.yml` — HTTPS server and deployment configuration.
 - `deploy/fullchain.pem`, `deploy/privkey.pem` — domain TLS certificate and private key.
