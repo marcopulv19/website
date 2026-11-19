@@ -7,6 +7,7 @@ services:
     ports:
       - "443:443"
     volumes:
-      - ./certs:/etc/nginx/certs:ro
+      - ./fullchain.pem:/etc/nginx/certs/fullchain.pem:ro
+      - ./privkey.pem:/etc/nginx/certs/privkey.pem:ro
       - ../:/var/www/site:ro
     restart: unless-stopped
