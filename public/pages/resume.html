@@ -94,10 +94,11 @@
       .resume-intro {
         grid-area: intro;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 0.2rem;
+        gap: 1rem;
+        flex-wrap: wrap;
         padding: 0.5rem 1.5rem;
         background: var(--panel-rose);
         border-bottom: 1px solid var(--light-gray);
@@ -106,7 +107,7 @@
 
       .resume-intro h1 {
         margin: 0;
-        font-size: 2rem;
+        font-size: clamp(1.4rem, 5vw, 2rem);
         line-height: 1.15;
         letter-spacing: 0.04em;
         color: var(--navy);
@@ -115,7 +116,7 @@
 
       .resume-intro h2 {
         margin: 0;
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 3.3vw, 1.3rem);
         font-weight: 700;
         color: var(--navy);
         letter-spacing: 0.06em;
@@ -135,11 +136,12 @@
 
       .portrait-card {
         grid-area: portrait;
+        align-self: center;
         display: flex;
         align-items: center;
         justify-content: center;
         background: var(--panel-rose);
-        padding: 0.4rem;
+        padding: 0;
       }
 
       .portrait-wrap {
@@ -150,7 +152,7 @@
 
       .portrait-wrap img {
         width: 100%;
-        max-width: 240px;
+        max-width: 200px;
         border-radius: 50%;
         border: 4px solid rgba(65, 68, 58, 0.2);
         object-fit: cover;
@@ -510,8 +512,8 @@
           padding: 10px;
         }
 
-        .resume-intro h1 {
-          font-size: 2.1rem;
+        .resume-intro {
+          padding: 0.5rem;
         }
 
         .sidebar {
@@ -721,7 +723,7 @@
               <p>102/180 ECTS. Average: 26.88/30.</p>
               <ul>
                 <li><strong><a href="/assets/tank-level.pdf" target="_blank" rel="noreferrer">Tank Level Control</a>:</strong> Coded and tuned an Arduino-based controller with two PID feedback loops: the outer loop measured tank level and generated a valve-aperture request; the inner loop used that request to regulate DC motor current and position a valve mechanically coupled to the motor (9 ECTS).</li>
-                <li><strong>LAN Design and Simulation:</strong> Network structure and interface designed and simulated using Kathará (12 ECTS).</li>
+                <li><strong><a href="/assets/tlc-homework-1.docx" target="_blank" rel="noreferrer">LAN Design and Simulation</a>:</strong> Network structure and interface designed and simulated using Kathará (12 ECTS).</li>
               </ul>
             </article>
 
